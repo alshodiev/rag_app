@@ -42,7 +42,7 @@ def upload_website_to_collection(url:str):
         doc.metadata = {"source_url" : url}
     
     vector_store.add_documents(docs)
-    print(f"Successfully uploaded {len(docs)} documents from {url}")
+    return f"Successfully uploaded {len(docs)} documents from {url}"
 
 #client.delete_collection("websites")
 #print("Collection 'websites' deleted.")
